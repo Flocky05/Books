@@ -12,7 +12,7 @@ const Target = (props) => {
         setBreaks(getFromDb())
     })
     return (
-        <div className='bg-slate-200 h-screen sm:sticky top-0'>
+        <div className='bg-slate-200 h-screen lg:sticky top-0'>
             <div className='flex gap-3 p-3 text-left pt-10'>
                 <img className='h-12 w-12 rounded-full ' src={logo} alt="" />
                 <div >
@@ -50,7 +50,7 @@ const Target = (props) => {
                 <h2 ><span className='text-xl font-semibold text-left p-3'>Exericise Time:</span> {props.time} minutes</h2>
             </div>
             <div className='flex justify-between rounded-md bg-gray-300 p-4 m-4'>
-                <h2><span className='text-xl font-semibold text-left p-3'>Break Time: </span> {breaks} minutes</h2>
+                <h2><span className='text-xl font-semibold text-left p-3'>Break Time: </span> {breaks || 0} minutes</h2>
             </div>
             <div className='p-3'>
                 <button onClick={() => toast.success('Yay! Completed')} className='btn bg-indigo-700  w-full'>Activity Completed</button>
