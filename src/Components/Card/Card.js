@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 const Card = (props) => {
-    const { book } = props;
+    const { book, setTime } = props;
     const { id, title, time, image } = book;
     return (
         <div>
@@ -13,7 +13,7 @@ const Card = (props) => {
                     <h2 className="card-title">{title}</h2>
                     <p>If a dog chews shoes whose shoes does he choose?</p>
                     <p>Time required : <span className='font-semibold'>{time}</span> min</p>
-                    <button className="btn bg-indigo-700 btn-sm w-full">Add to list</button>
+                    <button onClick={() => setTime(p => p + time)} className="btn bg-indigo-700 btn-sm w-full">Add to list</button>
                 </div>
             </div>
         </div>

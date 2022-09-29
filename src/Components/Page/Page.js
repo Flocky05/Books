@@ -4,6 +4,7 @@ import Target from '../Target/Target';
 
 const Page = () => {
     const [books, setBooks] = useState([]);
+    const [time, setTime] = useState(0);
     useEffect(() => {
         fetch(`fakeData.json`)
             .then(res => res.json())
@@ -17,15 +18,15 @@ const Page = () => {
                         <a href='/' className="btn btn-ghost normal-case text-xl text-indigo-600 ">LET'S READING</a>
                     </div>
                     <p className='text-xl text-left '>Select today’s Books</p>
-                    <div className='grid grid-cols-1 md:grid-cols-3 gap-8 ww-[90%] mx-auto'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ww-[90%] mx-auto'>
                         {
-                            books.map(book => (<Card book={book}></Card>))
+                            books.map(book => (<Card setTime={setTime} book={book}></Card>))
                         }
                     </div>
                 </div>
             </div>
             <div>
-                <Target></Target>
+                <Target time={time}></Target>
             </div>
         </div>
     );
