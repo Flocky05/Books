@@ -11,7 +11,7 @@ const Page = () => {
     }, [])
     return (
         <div className='grid grid-cols-4 gap-3'>
-            <div className='col-span-3'>
+            <div className='col-span-3 '>
                 <div className='p-12 mx-8'>
                     <div className="navbar bg-base-100 ">
                         <a href='/' className="btn btn-ghost normal-case text-xl text-indigo-600 ">LET'S READING</a>
