@@ -12,8 +12,8 @@ const Page = () => {
             .then(data => setBooks(data))
     }, [])
     return (
-        <div className='grid grid-cols-4 gap-3'>
-            <div className='col-span-full sm:col-span-2 lg:col-span-3'>
+        <div className='grid grid-cols-12 gap-3'>
+            <div className='col-span-full sm:col-span-6 lg:col-span-8 xl:col-span-9'>
                 <div className='p-2 lg:p-12 mx-8'>
                     <div className="navbar bg-base-100 "><BsBookHalf className='text-2xl text-indigo-600' />
                         <a href='/' className="btn btn-ghost normal-case text-2xl text-indigo-600 ">LET'S READING</a>
@@ -26,7 +26,7 @@ const Page = () => {
                     </div>
                 </div>
             </div>
-            <div className='order-first col-span-full sm:col-span-2 lg:col-span-1'>
+            <div className='order-first lg:order-1 col-span-full sm:col-span-6 lg:col-span-4 xl:col-span-3'>
                 <Target time={time}></Target>
             </div>
         </div>

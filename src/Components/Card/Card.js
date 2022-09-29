@@ -5,7 +5,7 @@ const Card = (props) => {
     const { id, title, time, image } = book;
     return (
         <div>
-            <div className="card w-full bg-base-100 shadow-xl">
+            <div className="card max-w-xs mx-auto w-full bg-base-100 shadow-xl">
                 <figure className="px-5 pt-5">
                     <img className='w-full h-36 rounded-xl' src={image} alt="Shoes" />
                 </figure>
