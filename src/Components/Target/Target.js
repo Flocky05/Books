@@ -8,7 +8,7 @@ const Target = (props) => {
         setBreaks(getFromDb())
     })
     return (
-        <div className='bg-slate-200 h-screen sticky top-0'>
+        <div className='bg-slate-200 h-screen sm:sticky top-0'>
             <div className='flex gap-3 p-3 text-left pt-10'>
                 <img className='h-12 w-12 rounded-full ' src={logo} alt="" />
                 <div >
