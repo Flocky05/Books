@@ -50,7 +50,7 @@ const Target = () => {
                 <h2 className='text-xl font-semibold text-left p-3'>Break time </h2>
             </div>
             <div className='p-3'>
-                <button className='btn bg-blue-600 btn-block w-full'>Activity Completed</button>
+                <button className='btn bg-indigo-700 btn-block w-full'>Activity Completed</button>
             </div>
         </div>
     );
