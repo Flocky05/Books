@@ -1,13 +1,14 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Page from './Components/Page/Page';
-import Card from './Components/Card/Card';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
 
       <Page></Page>
+      <ToastContainer />
     </div>
   );
 }

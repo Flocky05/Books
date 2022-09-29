@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import logo from '../../images/rakibul.jpg'
 import { ImLocation } from 'react-icons/im';
 import { getFromDb, setToDb } from '../../Utiliti/Utiliti';
+
+import { toast, } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 const Target = (props) => {
     const [breaks, setBreaks] = useState(0);
     useEffect(() => {
@@ -49,7 +53,7 @@ const Target = (props) => {
                 <h2><span className='text-xl font-semibold text-left p-3'>Break Time: </span> {breaks} minutes</h2>
             </div>
             <div className='p-3'>
-                <button className='btn bg-indigo-700  w-full'>Activity Completed</button>
+                <button onClick={() => toast.success('Yay! Completed')} className='btn bg-indigo-700  w-full'>Activity Completed</button>
             </div>
         </div >
     );
